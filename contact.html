@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - IA Aplicada a la Ingeniería Mecánica y Aeroespacial</title>
+    <title>Inicio - IA Aplicada a la Ingeniería Mecánica y Aeroespacial</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,11 +12,35 @@
             padding: 0;
             color: #333;
         }
-        header {
+        .header-background {
+            background-image: url('assets/images/background-course-image.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+        .header-bar {
             background-color: #00509E;
             color: white;
-            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .header-bar img {
+            max-width: 80px;
+            margin-right: 15px;
+        }
+        .header-title {
+            flex-grow: 1;
             text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .sub-title {
+            background-color: #003f7f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
         }
         nav {
             text-align: center;
@@ -47,9 +71,14 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Contacto</h1>
-    </header>
+    <div class="header-background"></div>
+    <div class="header-bar">
+        <img src="assets/images/university-logo.png" alt="Logo Universidad">
+        <img src="assets/images/school-logo.png" alt="Logo Escuela">
+        <div class="header-title">IA Aplicada a la Ingeniería Mecánica y Aeroespacial</div>
+    </div>
+ <div class="sub-title">Contacto</div>
+
 
     <nav>
         <a href="index.html">Inicio</a>
@@ -58,11 +87,22 @@
     </nav>
 
     <div class="container">
-        <h2>Información de Contacto</h2>
-        <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos:</p>
-        <p>Email: <a href="mailto:info@curso-ia.com">info@curso-ia.com</a></p>
-        <p>Teléfono: +34 123 456 789</p>
-        <p>Dirección: Universidad de la Ingeniería, Edificio Central, C/ Innovación 10, 28000 Madrid, España</p>
+        <h2>Bienvenido</h2>
+        <p>Este curso está diseñado para explorar el impacto de la inteligencia artificial en la ingeniería mecánica y aeroespacial. Dividido en módulos, ofrece una sólida base en aprendizaje automático, aprendizaje profundo y aplicaciones avanzadas como IA generativa y aprendizaje por refuerzo.</p>
+
+        <h3>Módulo de Fundamentos</h3>
+        <ul>
+            <li>Introducción a Python para Data Science (2 ECTS)</li>
+            <li>Fundamentos de Machine Learning (2 ECTS)</li>
+            <li>Fundamentos de Deep Learning (2 ECTS)</li>
+        </ul>
+
+        <h3>Módulo de Aplicaciones</h3>
+        <ul>
+            <li>Aprendizaje por Refuerzo Profundo</li>
+            <li>Machine Learning Científico y AI para la Ciencia</li>
+            <li>AI Generativa</li>
+        </ul>
     </div>
 
     <footer>
