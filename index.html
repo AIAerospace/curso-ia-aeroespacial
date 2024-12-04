@@ -13,7 +13,7 @@
             color: #333;
         }
         header {
-            background-image: url('/assets/images/background-course-image.png');
+            background-image: url('assets/images/background-course-image.png');
             background-size: cover;
             background-position: center;
             color: white;
@@ -38,14 +38,6 @@
             max-width: 900px;
             margin: auto;
         }
-        .module {
-            margin-bottom: 30px;
-        }
-        .module img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
         footer {
             background-color: #f4f4f4;
             color: #333;
@@ -54,39 +46,7 @@
             margin-top: 30px;
             border-top: 1px solid #ddd;
         }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .tabs {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .tabs button {
-            background-color: #00509E;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin: 0 5px;
-        }
-        .tabs button.active {
-            background-color: #003f7f;
-        }
     </style>
-    <script>
-        function showTab(tabId) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-
-            const buttons = document.querySelectorAll('.tabs button');
-            buttons.forEach(button => button.classList.remove('active'));
-            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -95,76 +55,28 @@
     </header>
 
     <nav>
-        <a href="#home">Inicio</a>
-        <a href="#professors">Profesores</a>
-        <a href="#contact">Contacto</a>
+        <a href="index.html">Inicio</a>
+        <a href="professors.html">Profesores</a>
+        <a href="contact.html">Contacto</a>
     </nav>
 
     <div class="container">
-        <div class="tabs">
-            <button class="active" data-tab="home" onclick="showTab('home')">Inicio</button>
-            <button data-tab="professors" onclick="showTab('professors')">Profesores</button>
-            <button data-tab="contact" onclick="showTab('contact')">Contacto</button>
-        </div>
+        <h2>Bienvenido</h2>
+        <p>Este curso está diseñado para explorar el impacto de la inteligencia artificial en la ingeniería mecánica y aeroespacial. Dividido en módulos, ofrece una sólida base en aprendizaje automático, aprendizaje profundo y aplicaciones avanzadas como IA generativa y aprendizaje por refuerzo.</p>
 
-        <div id="home" class="tab-content active">
-            <section id="fundamentals">
-                <h2>Módulo de Fundamentos</h2>
-                <div class="module">
-                    <h3>1. Introducción a Python para Data Science (2 ECTS)</h3>
-                    <img src="https://via.placeholder.com/800x400" alt="Python para Data Science">
-                    <p>Explora las bases de Python, las librerías fundamentales como NumPy, Pandas y Matplotlib, y desarrolla habilidades esenciales para análisis de datos.</p>
-                </div>
-                <div class="module">
-                    <h3>2. Fundamentos de Machine Learning (2 ECTS)</h3>
-                    <img src="https://via.placeholder.com/800x400" alt="Fundamentos de Machine Learning">
-                    <p>Aprende los conceptos básicos del aprendizaje supervisado y no supervisado, y utiliza herramientas como Scikit-learn para construir modelos.</p>
-                </div>
-                <div class="module">
-                    <h3>3. Fundamentos de Deep Learning (2 ECTS)</h3>
-                    <img src="https://via.placeholder.com/800x400" alt="Fundamentos de Deep Learning">
-                    <p>Descubre las redes neuronales y frameworks como TensorFlow y PyTorch para crear tus propios modelos de aprendizaje profundo.</p>
-                </div>
-            </section>
+        <h3>Módulo de Fundamentos</h3>
+        <ul>
+            <li>Introducción a Python para Data Science (2 ECTS)</li>
+            <li>Fundamentos de Machine Learning (2 ECTS)</li>
+            <li>Fundamentos de Deep Learning (2 ECTS)</li>
+        </ul>
 
-            <section id="applications">
-                <h2>Módulo de Aplicaciones</h2>
-                <div class="module">
-                    <h3>4. Aprendizaje por Refuerzo Profundo</h3>
-                    <img src="https://via.placeholder.com/800x400" alt="Aprendizaje por Refuerzo Profundo">
-                    <p>Desarrolla agentes inteligentes que aprenden a interactuar con su entorno para resolver problemas complejos en mecánica y aeroespacial.</p>
-                </div>
-                <div class="module">
-                    <h3>5. Machine Learning Científico y AI para la Ciencia</h3>
-                    <img src="https://via.placeholder.com/800x400" alt="Machine Learning Científico">
-                    <p>Aplica herramientas avanzadas de ML para simulaciones científicas y optimización de procesos en ingeniería.</p>
-                </div>
-                <div class="module">
-                    <h3>6. AI Generativa</h3>
-                    <img src="https://via.placeholder.com/800x400" alt="AI Generativa">
-                    <p>Explora cómo generar nuevos diseños, datos sintéticos y simulaciones a través de técnicas avanzadas de AI generativa.</p>
-                </div>
-            </section>
-        </div>
-
-        <div id="professors" class="tab-content">
-            <section>
-                <h2>Profesores</h2>
-                <p>El curso será impartido por un equipo de expertos en inteligencia artificial y sus aplicaciones en ingeniería mecánica y aeroespacial.</p>
-                <ul>
-                    <li>Dr. Ana Pérez - Especialista en Machine Learning.</li>
-                    <li>Dr. Juan López - Experto en AI Generativa.</li>
-                    <li>Dr. Marta García - Investigadora en Aprendizaje por Refuerzo.</li>
-                </ul>
-            </section>
-        </div>
-
-        <div id="contact" class="tab-content">
-            <section>
-                <h2>Contacto</h2>
-                <p>Para más información, puedes escribirnos a: <a href="mailto:info@curso-ia.com">info@curso-ia.com</a></p>
-            </section>
-        </div>
+        <h3>Módulo de Aplicaciones</h3>
+        <ul>
+            <li>Aprendizaje por Refuerzo Profundo</li>
+            <li>Machine Learning Científico y AI para la Ciencia</li>
+            <li>AI Generativa</li>
+        </ul>
     </div>
 
     <footer>
